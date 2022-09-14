@@ -28,13 +28,11 @@ public class LocationProvider {
 
     private static LocationProvider mInstance;
 
-    // Android Location Provider
     private final LocationManager locationManager;
     private final FusedLocationProviderClient fusedLocationClient;
     private LocationRequest locationRequest;
 
 
-    // Fused Location Provider
     public static Long UPDATE_INTERVAL_SECS = 10L;
     public static Long FASTEST_UPDATE_INTERVAL_SECS = 5L;
     public static Long MAXIMUM_WAIT_TIME_SECS = 15L;
@@ -165,10 +163,9 @@ public class LocationProvider {
             public void onLocationResult(@NonNull LocationResult locationResult) {
                 Location location = locationResult.getLastLocation();
                 if (location != null) {
-                    Log.d("LocationTest" , location.getProvider() + " .. Location is : " + location);
+                    Log.d("LocationTest" , " Location is : " + location);
                     locationObserver.onGettingLocationUpdates(location);
-                } else
-                    Log.d("LocationTest" , "Fused .. Location is : null");
+                } 
             }
         };
     }
