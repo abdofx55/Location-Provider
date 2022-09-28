@@ -119,20 +119,15 @@ public class LocationProvider {
                     locationObserver.onGettingLocationUpdates(location);
             }
 
+            @Deprecated
             @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-                LocationListener.super.onStatusChanged(provider, status, extras);
-            }
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
 
             @Override
-            public void onProviderEnabled(@NonNull String provider) {
-                LocationListener.super.onProviderEnabled(provider);
-            }
+            public void onProviderEnabled(@NonNull String provider) {}
 
             @Override
-            public void onProviderDisabled(@NonNull String provider) {
-                LocationListener.super.onProviderDisabled(provider);
-            }
+            public void onProviderDisabled(@NonNull String provider) {}
         };
 
         gpsLocationListener = new LocationListener() {
@@ -142,20 +137,15 @@ public class LocationProvider {
                 locationObserver.onGettingLocationUpdates(location);
             }
 
+            @Deprecated
             @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-                LocationListener.super.onStatusChanged(provider, status, extras);
-            }
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
 
             @Override
-            public void onProviderEnabled(@NonNull String provider) {
-                LocationListener.super.onProviderEnabled(provider);
-            }
+            public void onProviderEnabled(@NonNull String provider) {}
 
             @Override
-            public void onProviderDisabled(@NonNull String provider) {
-                LocationListener.super.onProviderDisabled(provider);
-            }
+            public void onProviderDisabled(@NonNull String provider) {}
         };
 
         fusedLocationCallback = new LocationCallback() {
